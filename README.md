@@ -155,3 +155,29 @@ InFile.close()
 outputFile.close()
 
 ```
+
+
+```
+join string in python
+
+#%%
+InFileName = "Raw.MILK.Phenotype"
+InFile = open(InFileName,"r")
+outputFile = open("outputfile_MILK_Active.txt", 'w')
+#LineNumber = 0
+string1 = []
+i = 1
+for Line in InFile:
+    #print(len(Line))
+    string1 = []
+    Line = Line.strip('\n')
+    ElementList = Line.split(' ')
+    s = "-";
+    seq = ElementList[1]
+    print(s.join([seq[:4],seq[4:6],seq[6:]]))
+    #print(ElementList[7])
+    #print(ElementList[1] )
+    #rint(ElementList[6] + " " + ElementList[7] + '\n')
+InFile.close()
+outputFile.close()
+```
