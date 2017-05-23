@@ -181,6 +181,11 @@ for Line in InFile:
 InFile.close()
 outputFile.close()
 
+```
+
+
+```
+how to extract a particular column in python using csv module
 
 ```
 import pandas as pd
