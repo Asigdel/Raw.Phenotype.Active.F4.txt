@@ -188,6 +188,8 @@ outputFile.close()
 how to extract a particular column in python using csv module
 
 ```
+
+```
 import pandas as pd
 df = pd.read_csv("may22.csv",usecols = [1,2,5,9,10,11,12,15,16,17,20,21,22,25,26,27])
                                       #30,31,32,35,36,37,40,41,42,45,46,47,50,51,52,55,56,57,
@@ -197,3 +199,5 @@ print(df)
 df.to_csv("columns_milk", sep='\t')
 
 ```
+
+
