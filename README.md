@@ -230,4 +230,49 @@ df['NewDate'] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.
 df
 ```
 
+```
+Creating a new_date column by adding days to date 
+
+```
+
+import pandas as pd
+df = pd.read_csv("clean1.Phenotype_milk_Testday7_Lac1.2.3.txt",sep=" ",header = None)
+df.columns = ["Cows","calvingdates","Lac.No.","DIM1","MF1","MY1","DIM2","MF2","MY2","DIM3","MF3","MY3","DIM4","MF4","MY4","DIM5","MF5","MY5",
+              "DIM6","MF6","MY6","DIM7","MF7","MY7","DIM8","MF8","MY8","DIM9","MF9","MY9","DIM10","MF10","MY10","DIM11","MF11","MY11","DIM12","MF12","MY12",
+              "DIM13","MF13","MY13","DIM14","MF14","MY14","DIM15","MF15","MY15","DIM16","MF16","MY16","DIM17","MF17","MY17","DIM18","MF18","MY18","DIM19","MF19","MY19",
+              "DIM20","MF20","MY20"]
+#print(df)
+df["Testdate1"] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM1),unit ="D")
+df["Testdate2"] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM2),unit ="D")
+df["Testdate3"] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM3),unit ="D")
+df["Testdate4"] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM4),unit ="D")
+df["Testdate5"] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM5),unit ="D")
+df["Testdate6"] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM6),unit ="D")
+df["Testdate7"] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM7),unit ="D")
+df["Testdate8"] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM8),unit ="D")
+df["Testdate9"] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM9),unit ="D")
+df["Testdate10"] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM10),unit ="D")
+df["Testdate11"] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM11),unit ="D")
+df["Testdate12"] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM12),unit ="D")
+df["Testdate13"] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM13),unit ="D")
+df["Testdate14"] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM14),unit ="D")
+df["Testdate15"] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM15),unit ="D")
+df["Testdate16"] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM16),unit ="D")
+df["Testdate17"] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM17),unit ="D")
+df["Testdate18"] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM18),unit ="D")
+df["Testdate19"] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM19),unit ="D")
+df["Testdate20"] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM20),unit ="D")
+print(df)
+df.to_csv("phenotype.milk", sep='\t')
+
+```
+
+
+
+
+
+
+
+
+
 
