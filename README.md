@@ -216,6 +216,11 @@ print(df)
 df.to_csv("columns_milk1", sep='\t')
 ```
 
+
+```
+Adding varying days column to a date column and obtain a new date column 
+
+```
 ```
 import pandas as pd
 df = pd.read_csv("days.date.milk.csv")
