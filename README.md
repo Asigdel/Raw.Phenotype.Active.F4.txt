@@ -216,4 +216,13 @@ print(df)
 df.to_csv("columns_milk1", sep='\t')
 ```
 
+```
+import pandas as pd
+df = pd.read_csv("days.date.milk.csv")
+#print(df)
+
+df['NewDate'] = pd.to_datetime(df.calvingdates) + pd.to_timedelta(pd.np.ceil(df.DIM1),unit ="D")
+df
+```
+
 
