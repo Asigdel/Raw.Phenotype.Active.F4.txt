@@ -269,6 +269,20 @@ df.to_csv("phenotype.milk", sep='\t')
 
 ```
 
+```
+sorting the rows by the values of a column Data wrangling with pandas
+
+```
+```
+#%%
+import pandas as pd
+df = pd.read_csv("phenotype.milk.txt",sep = "\t")
+sort_cows = (df.sort("Unnamed: 1"))
+print(sort_cows)
+sort_cows.to_csv("sort_cows", sep='\t')
+
+```
+
 
 
 
